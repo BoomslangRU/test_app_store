@@ -1,70 +1,112 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ТЕСТОВОЕ ЗАДАНИЕ
 
-## Available Scripts
 
-In the project directory, you can run:
+Сделать небольшое приложение-магазин с номенклатурой товаров, возможностью их
+добавления в заказ, просмотром заказанных товаров в корзине.
 
-### `npm start`
+Приложение должно быть написано на TypeScript с использованием библиотек React, mobx, mobx-state-tree. Для стилизации использовать метаязык Sass.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Приложение должно иметь описанный ниже функционал и состоять из следующих элементов:
+Экран Заказа
+На экране заказа расположены следующие элементы:
+2.1 Хедер
+В хедере отображается: 
+кнопка Корзины (при нажатии переносит на экран Корзина)
+количество заказанных товаров
+2.2 Панель заказа
+При добавлении товаров в заказ они отображаются на панели заказа в виде списка.
+В каждой позиции списка должно быть: 
+название добавленного товара, 
+его количество, 
+кнопки увеличения/уменьшения количества товара (при нажатии на них количество товара в заказе увеличивается/уменьшается соответственно)
+кнопка удаления товара из заказа (при нажатии - удаляет товар из заказа)
+суммарная стоимость всех заказанных товаров (при добавлении товара в заказ она увеличивается, при удалении - уменьшается)
+2.3 Панель товаров
+На ней находятся:
+- карточки с названием товара (при нажатии на карточку товар добавляется в панель заказа, при этом одинаковые товары должны увеличивать количество товара в панели заказа.)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Экран Корзина
+На экране Корзина находятся:
+3.1 Хедер (тот же, что и на Экране заказа)
+3.2 Список заказанных товаров с их количеством и ценой за единицу
+В элементе списка должны быть: 
+название заказанного товара
+кнопка удаления товара из корзины (при её нажатии товар удаляется из корзины)
+количество заказанного товара и цена за единицу
+3.3 Суммарная стоимость всех заказанных товаров
+3.4 Кнопка для очищения корзины (при её нажатии из корзины удаляются все товары)
+3.5 Кнопка Заказать (при её нажатии появляется модальное окно с сообщением об успешности заказа и кнопкой Ок, нажатии по которой переносит пользователя на Экран заказа.)
+Дизайн экранов и элементов свободный и чисто формальный, но желательно, чтобы разные элементы отличались друг от друга: например, карточки товаров могут располагаться рядами, а товары в панели заказа выглядеть как список. Можно использовать любые картинки или иконки по желанию. 
 
-### `npm test`
+Предполагается, что исходные данные запрашиваются с сервера, но в данном задании запрашивать или экспортировать их можно любым удобным способом.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Исходные данные с товарами: 
+[
+	{
+		id: 1,
+		name: "товар1",
+		price: "50",
+	},
+	{
+		id: 2,
+		name: "товар2",
+		price: "100",
+	},
+	{
+		id: 3,
+		name: "товар3",
+		price: "150",
+	},
+	{
+		id: 4,
+		name: "товар4",
+		price: "200",
+	},
+	{
+		id: 5,
+		name: “товар5”,
+		price: "250",
+	},
+	{
+		id: 6,
+		name: "товар6",
+		price: "300",
+	},
+	{
+		id: 7,
+		name: "товар7",
+		price: "350",
+	},
+	{
+		id: 8,
+		name: "товар8",
+		price: "400",
+	},
+	{
+		id: 9,
+		name: "товар9",
+		price: "450",
+	},
+	{
+		id: 10,
+		name: "товар10",
+		price: "500",
+	},
+]
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Уточнающие вопросы и ответы:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1.
+Вопрос: Уточнить что имеется ввиду вот в этом пункте... 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Предполагается, что исходные данные запрашиваются с сервера, но в данном задании запрашивать или экспортировать их можно любым удобным способом.
 
-### `npm run eject`
+Ответ: Данные можно просто в json файл положить в исходниках, чтобы не заморачиваться с мок-сервером
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+2.
+Вопрос: И категорически Sass или SCSS тоже подойдет ?
+Ответ: SCSS тоже подойдёт
+# test_app_store
