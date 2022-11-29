@@ -7,7 +7,8 @@ import s from './ProductItem.module.scss'
 
 
 
-
+// РЕВЬЮ. По неймингу, на мой взгляд, именование в единственном чиле путает в данной ситуации
+// Это не "Продукт", а "Список продуктов".
 const ProductItem = () => {
    const { products, totalCost, basket } = useStore()
 

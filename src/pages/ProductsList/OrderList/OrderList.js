@@ -73,7 +73,7 @@ const OrderList = () => {
             <div className={s.total}>
                суммарная стоимость:
                <span className={s.totalNumber}>
-                  {totalCost?.sum}
+                   {basket.sum}
                </span>
             </div>
             <Divider />
